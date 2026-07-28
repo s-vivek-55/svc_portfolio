@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. Vivek | Full-Stack Java Developer & Enterprise Cloud Architect</title>
+    <meta name="description"
+        content="Portfolio of S. Vivek - Full-Stack Java Developer with 6+ years of experience in enterprise applications, cloud technologies (GCP/Docker/K8s), AI engineering, and ServiceNow automation.">
+    <meta name="author" content="S. Vivek">
+
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- Ambient Animated Canvas Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Header & Navigation -->
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg glass-nav">
+            <div class="container">
+                <a href="#home" class="navbar-brand logo">
+                    <span class="logo-bracket">&lt;</span>SV<span class="logo-dot">/</span><span
+                        class="logo-bracket">&gt;</span>
+                </a>
+
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                        <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+                        <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <a href="#contact" class="btn btn-nav-cta">Let's Talk</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section d-flex align-items-center min-vh-100">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="hero-badge">
+                            <span class="badge-dot"></span> Available for Senior / Lead Full-Stack Roles
+                        </div>
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="gradient-text">S. Vivek</span>
+                        </h1>
+                        <h2 class="hero-role mb-3">
+                            Full-Stack Java Developer
+                        </h2>
+                        <h3 class="hero-subtitle mb-4">
+                            <span class="typewriter" id="typewriter-text"
+                                data-words='["Enterprise Workflows", "Cloud Microservices (GCP/K8s)", "AI-Assisted Engineering", "ServiceNow Integration & Automation"]'></span>
+                            <span class="cursor">|</span>
+                        </h3>
+                        <p class="hero-description lead mb-4">
+                            Senior Full-Stack Developer with <strong>6+ years of hands-on experience</strong>
+                            architecting high-availability enterprise applications, scalable Spring Boot microservices,
+                            modern Angular frontends, and automated workflow solutions.
+                        </p>
+                        <div class="hero-buttons d-flex flex-wrap gap-3 mb-4">
+                            <a href="#projects" class="btn btn-primary-gradient">
+                                <i class="fa-solid fa-rocket me-2"></i>View Projects
+                            </a>
+                            <a href="#contact" class="btn btn-outline-glass">
+                                <i class="fa-solid fa-envelope me-2"></i>Contact Me
+                            </a>
+                            <a href="#about" class="btn btn-secondary-glass">
+                                <i class="fa-solid fa-file-arrow-down me-2"></i>Explore Experience
+                            </a>
+                        </div>
+                        <div class="hero-socials d-flex align-items-center gap-3">
+                            <span class="social-label text-muted fs-7">Connect with me:</span>
+                            <a href="https://github.com" target="_blank" rel="noopener" class="social-icon"
+                                aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon"
+                                aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:vivek.fullstack.dev@gmail.com" class="social-icon" aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="hero-avatar-wrapper text-center">
+                            <div class="avatar-glow"></div>
+                            <div class="avatar-card glass-card">
+                                <div class="avatar-img-container">
+                                    <img src="assets/images/vivekk.jpeg" alt="S. Vivek Profile Photo"
+                                        class="profile-photo-img" onerror="this.src='assets/images/profile.jpeg'">
+                                </div>
+                                <div class="avatar-badge badge-exp">
+                                    <i class="fa-solid fa-award text-accent"></i>
+                                    <div>
+                                        <span class="fw-bold d-block">6+ Years</span>
+                                        <small class="text-muted fs-8">Enterprise Exp.</small>
+                                    </div>
+                                </div>
+                                <div class="avatar-badge badge-cloud">
+                                    <i class="fa-solid fa-cloud text-secondary-color"></i>
+                                    <div>
+                                        <span class="fw-bold d-block">Cloud & AI</span>
+                                        <small class="text-muted fs-8">GCP / OCI / K8s</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-padding position-relative">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <span class="section-subtitle">Professional Background</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="glass-card p-4 p-md-5">
+                            <h3 class="h4 gradient-text mb-3">Enterprise Java Developer & Cloud Engineer</h3>
+                            <p class="text-light-gray">
+                                I am an accomplished <strong>Full-Stack Java Developer</strong> with over 6 years of
+                                expertise building resilient backend microservices, high-speed frontend applications,
+                                and automated enterprise workflows.
+                            </p>
+                            <p class="text-light-gray">
+                                My background spans core <strong>Java, Spring Boot, Angular, Flutter, Python automation,
+                                    Docker, Kubernetes</strong>, and cloud infrastructure on <strong>Google Cloud
+                                    Platform</strong>. I specialize in modernizing legacy Java systems, integrating
+                                <strong>ServiceNow (Integration Hub & Flow Designer)</strong>, and implementing
+                                enterprise SSO/OAuth security.
+                            </p>
+                            <p class="text-light-gray">
+                                Driven by technical innovation, I leverage <strong>AI-assisted engineering</strong>
+                                workflows and Generative AI principles to streamline code delivery, optimize
+                                performance, and deliver high-impact solutions.
+                            </p>
+                            <div class="row g-3 mt-3">
+                                <div class="col-6">
+                                    <div class="info-item">
+                                        <span class="info-label text-muted d-block fs-7">Name:</span>
+                                        <span class="info-value fw-semibold text-white">S. Vivek</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="info-item">
+                                        <span class="info-label text-muted d-block fs-7">Role:</span>
+                                        <span class="info-value fw-semibold text-white">Full-Stack Java Developer</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="info-item">
+                                        <span class="info-label text-muted d-block fs-7">Experience:</span>
+                                        <span class="info-value fw-semibold text-white">6+ Years Enterprise</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="info-item">
+                                        <span class="info-label text-muted d-block fs-7">Education:</span>
+                                        <span class="info-value fw-semibold text-white">B.Tech (JNTU Anantapur)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="stat-card glass-card text-center p-4">
+                                    <div class="stat-icon icon-primary mb-3">
+                                        <i class="fa-brands fa-java"></i>
+                                    </div>
+                                    <h3 class="stat-number gradient-text mb-1">6+</h3>
+                                    <p class="stat-label mb-0 text-muted">Years Java & Spring Boot</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="stat-card glass-card text-center p-4">
+                                    <div class="stat-icon icon-secondary mb-3">
+                                        <i class="fa-solid fa-cloud"></i>
+                                    </div>
+                                    <h3 class="stat-number gradient-text mb-1">GCP / K8s</h3>
+                                    <p class="stat-label mb-0 text-muted">Cloud & Microservices</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="stat-card glass-card text-center p-4">
+                                    <div class="stat-icon icon-accent mb-3">
+                                        <i class="fa-solid fa-cogs"></i>
+                                    </div>
+                                    <h3 class="stat-number gradient-text mb-1">ServiceNow</h3>
+                                    <p class="stat-label mb-0 text-muted">Flow & Integration Hub</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="stat-card glass-card text-center p-4">
+                                    <div class="stat-icon icon-highlight mb-3">
+                                        <i class="fa-solid fa-brain"></i>
+                                    </div>
+                                    <h3 class="stat-number gradient-text mb-1">OCI AI</h3>
+                                    <p class="stat-label mb-0 text-muted">Certified AI Professional</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section-padding bg-glass-section">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <span class="section-subtitle">Core Competencies</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Skill Card 1: Java -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-java mb-3">
+                                <i class="fa-brands fa-java"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Java</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-primary-gradient" role="progressbar" data-width="95%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">95% Mastery</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 2: Spring Boot -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="150">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-spring mb-3">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Spring Boot</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-accent-gradient" role="progressbar" data-width="92%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">92% Advanced</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 3: Angular -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-angular mb-3">
+                                <i class="fa-brands fa-angular"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Angular</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-highlight-gradient" role="progressbar" data-width="88%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">88% Proficient</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 4: Flutter -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="250">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-flutter mb-3">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Flutter</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-secondary-gradient" role="progressbar" data-width="85%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">85% Proficient</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 5: Python -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-python mb-3">
+                                <i class="fa-brands fa-python"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Python</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-secondary-gradient" role="progressbar" data-width="90%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">90% Advanced</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 6: JavaScript -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="350">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-js mb-3">
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">JavaScript</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-highlight-gradient" role="progressbar" data-width="90%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">90% Advanced</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 7: TypeScript -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-ts mb-3">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">TypeScript</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-primary-gradient" role="progressbar" data-width="88%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">88% Proficient</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 8: REST APIs -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="450">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-api mb-3">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">REST APIs</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-accent-gradient" role="progressbar" data-width="95%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">95% Expert</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 9: Microservices -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-micro mb-3">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Microservices</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-primary-gradient" role="progressbar" data-width="92%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">92% Expert</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 10: Docker -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="550">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-docker mb-3">
+                                <i class="fa-brands fa-docker"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Docker</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-secondary-gradient" role="progressbar" data-width="88%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">88% Proficient</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 11: Kubernetes -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-k8s mb-3">
+                                <i class="fa-solid fa-dharmachakra"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Kubernetes</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-primary-gradient" role="progressbar" data-width="85%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">85% Proficient</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 12: GCP -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="650">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-gcp mb-3">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Google Cloud (GCP)</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-highlight-gradient" role="progressbar" data-width="87%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">87% Advanced</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 13: Jenkins -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="700">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-jenkins mb-3">
+                                <i class="fa-brands fa-jenkins"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Jenkins CI/CD</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-secondary-gradient" role="progressbar" data-width="88%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">88% Advanced</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 14: Azure SSO -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="750">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-azure mb-3">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">Azure SSO & OAuth</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-primary-gradient" role="progressbar" data-width="89%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">89% Advanced</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 15: ServiceNow -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="800">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-servicenow mb-3">
+                                <i class="fa-solid fa-sliders"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">ServiceNow</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-accent-gradient" role="progressbar" data-width="92%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">92% Specialist</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 16: Databases -->
+                    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="850">
+                        <div class="skill-card glass-card p-4 text-center">
+                            <div class="skill-icon icon-db mb-3">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <h4 class="h5 text-white mb-2">MySQL / PostgreSQL / Mongo</h4>
+                            <div class="progress custom-progress mb-2">
+                                <div class="progress-bar bg-highlight-gradient" role="progressbar" data-width="90%"
+                                    style="width: 0%"></div>
+                            </div>
+                            <span class="skill-percent text-muted fs-7">90% Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <span class="section-subtitle">Career Journey</span>
+                    <h2 class="section-title">Work Experience</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card p-4 p-md-5">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h3 class="h4 text-white mb-1">Software Development Consultant I</h3>
+                                    <h4 class="h6 text-secondary-color font-monospace">Lumen Technologies</h4>
+                                </div>
+                                <span class="badge badge-date">6+ Years Experience Context</span>
+                            </div>
+                            <p class="text-light-gray mb-3">
+                                Lead developer for high-throughput enterprise application workflows, cloud integration,
+                                and workflow automation.
+                            </p>
+                            <ul class="experience-list text-light-gray mb-4">
+                                <li><i class="fa-solid fa-caret-right text-primary-color me-2"></i>Architected and
+                                    deployed production-grade Spring Boot microservices on Kubernetes via GCP.</li>
+                                <li><i class="fa-solid fa-caret-right text-primary-color me-2"></i>Integrated ServiceNow
+                                    Integration Hub and Flow Designer with enterprise Java backend services.</li>
+                                <li><i class="fa-solid fa-caret-right text-primary-color me-2"></i>Built custom Python
+                                    automation scripts to streamline ticketing, logging, and infrastructure
+                                    orchestration.</li>
+                                <li><i class="fa-solid fa-caret-right text-primary-color me-2"></i>Developed responsive
+                                    Angular dashboards for real-time monitoring and business workflow visibility.</li>
+                            </ul>
+                            <div class="tech-tags d-flex flex-wrap gap-2">
+                                <span class="tech-tag">Java 17</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">GCP</span>
+                                <span class="tech-tag">Kubernetes</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">ServiceNow</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card p-4 p-md-5">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h3 class="h4 text-white mb-1">Software Engineer</h3>
+                                    <h4 class="h6 text-secondary-color font-monospace">Progentys Info Solution Pvt Ltd
+                                    </h4>
+                                </div>
+                                <span class="badge badge-date">Enterprise Core</span>
+                            </div>
+                            <p class="text-light-gray mb-3">
+                                Key software developer responsible for building resilient J2EE backend systems, RESTful
+                                API architectures, and web portals.
+                            </p>
+                            <ul class="experience-list text-light-gray mb-4">
+                                <li><i class="fa-solid fa-caret-right text-primary-color me-2"></i>Designed and
+                                    maintained secure REST APIs handling thousands of daily active transactions.</li>
+                                <li><i class="fa-solid fa-caret-right text-primary-color me-2"></i>Implemented Azure SSO
+                                    authentication, OAuth2 token handling, and role-based access control (RBAC).</li>
+                                <li><i class="fa-solid fa-caret-right text-primary-color me-2"></i>Optimized MySQL and
+                                    PostgreSQL database query execution plans, reducing response times by 35%.</li>
+                                <li><i class="fa-solid fa-caret-right text-primary-color me-2"></i>Configured automated
+                                    CI/CD build pipelines utilizing Jenkins and Docker container registries.</li>
+                            </ul>
+                            <div class="tech-tags d-flex flex-wrap gap-2">
+                                <span class="tech-tag">Java / J2EE</span>
+                                <span class="tech-tag">Spring MVC</span>
+                                <span class="tech-tag">REST APIs</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Azure SSO</span>
+                                <span class="tech-tag">Jenkins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding bg-glass-section">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <span class="section-subtitle">Featured Portfolio Work</span>
+                    <h2 class="section-title">Key Projects</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Project 1 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-card glass-card h-100 d-flex flex-column">
+                            <div class="project-img-wrapper">
+                                <div class="project-placeholder-bg grad-1">
+                                    <i class="fa-solid fa-building-user project-icon"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="badge bg-primary mb-2">Spring Boot & Angular</span>
+                                </div>
+                            </div>
+                            <div class="project-body p-4 d-flex flex-column flex-grow-1">
+                                <h3 class="h5 text-white project-title mb-2">Construction Specific System (CSS)</h3>
+                                <p class="text-light-gray fs-7 flex-grow-1">
+                                    Comprehensive enterprise resource management platform streamlining construction
+                                    tracking, material inventory, contractor workflows, and real-time operational
+                                    reporting.
+                                </p>
+                                <div class="tech-tags d-flex flex-wrap gap-1 mb-3">
+                                    <span class="tech-tag fs-8">Java</span>
+                                    <span class="tech-tag fs-8">Spring Boot</span>
+                                    <span class="tech-tag fs-8">Angular</span>
+                                    <span class="tech-tag fs-8">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-card glass-card h-100 d-flex flex-column">
+                            <div class="project-img-wrapper">
+                                <div class="project-placeholder-bg grad-2">
+                                    <i class="fa-solid fa-server project-icon"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="badge bg-info text-dark mb-2">Cloud & Microservices</span>
+                                </div>
+                            </div>
+                            <div class="project-body p-4 d-flex flex-column flex-grow-1">
+                                <h3 class="h5 text-white project-title mb-2">Legacy Java Modernization</h3>
+                                <p class="text-light-gray fs-7 flex-grow-1">
+                                    Complete architectural refactoring of a monolithic J2EE system into containerized
+                                    Spring Boot microservices deployed on Google Cloud Platform via Kubernetes.
+                                </p>
+                                <div class="tech-tags d-flex flex-wrap gap-1 mb-3">
+                                    <span class="tech-tag fs-8">Java 17</span>
+                                    <span class="tech-tag fs-8">Docker</span>
+                                    <span class="tech-tag fs-8">Kubernetes</span>
+                                    <span class="tech-tag fs-8">GCP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-card glass-card h-100 d-flex flex-column">
+                            <div class="project-img-wrapper">
+                                <div class="project-placeholder-bg grad-3">
+                                    <i class="fa-solid fa-robot project-icon"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="badge bg-success mb-2">Automation & Python</span>
+                                </div>
+                            </div>
+                            <div class="project-body p-4 d-flex flex-column flex-grow-1">
+                                <h3 class="h5 text-white project-title mb-2">Python ServiceNow Automation Tool</h3>
+                                <p class="text-light-gray fs-7 flex-grow-1">
+                                    Automated ITSM tool built with Python to orchestrate ServiceNow ticket dispatch,
+                                    Integration Hub REST API synchronization, and infrastructure health monitoring.
+                                </p>
+                                <div class="tech-tags d-flex flex-wrap gap-1 mb-3">
+                                    <span class="tech-tag fs-8">Python</span>
+                                    <span class="tech-tag fs-8">ServiceNow</span>
+                                    <span class="tech-tag fs-8">REST API</span>
+                                    <span class="tech-tag fs-8">Flow Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-card glass-card h-100 d-flex flex-column">
+                            <div class="project-img-wrapper">
+                                <div class="project-placeholder-bg grad-4">
+                                    <i class="fa-solid fa-mobile-screen project-icon"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="badge bg-warning text-dark mb-2">Mobile & Cross-Platform</span>
+                                </div>
+                            </div>
+                            <div class="project-body p-4 d-flex flex-column flex-grow-1">
+                                <h3 class="h5 text-white project-title mb-2">Digi Works Mobile App</h3>
+                                <p class="text-light-gray fs-7 flex-grow-1">
+                                    High-performance mobile application engineered with Flutter for digital workforce
+                                    tracking, field reporting, push notifications, and offline data sync.
+                                </p>
+                                <div class="tech-tags d-flex flex-wrap gap-1 mb-3">
+                                    <span class="tech-tag fs-8">Flutter</span>
+                                    <span class="tech-tag fs-8">Dart</span>
+                                    <span class="tech-tag fs-8">REST Services</span>
+                                    <span class="tech-tag fs-8">Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="project-card glass-card h-100 d-flex flex-column">
+                            <div class="project-img-wrapper">
+                                <div class="project-placeholder-bg grad-5">
+                                    <i class="fa-solid fa-folder-tree project-icon"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <span class="badge bg-danger mb-2">Enterprise Security & Document Portal</span>
+                                </div>
+                            </div>
+                            <div class="project-body p-4 d-flex flex-column flex-grow-1">
+                                <h3 class="h5 text-white project-title mb-2">Electronic Document Management System</h3>
+                                <p class="text-light-gray fs-7 flex-grow-1">
+                                    Enterprise-grade secure document archival portal featuring Azure SSO authentication,
+                                    encrypted storage, version control, and granular role permissions.
+                                </p>
+                                <div class="tech-tags d-flex flex-wrap gap-1 mb-3">
+                                    <span class="tech-tag fs-8">Java</span>
+                                    <span class="tech-tag fs-8">Spring Security</span>
+                                    <span class="tech-tag fs-8">Azure SSO</span>
+                                    <span class="tech-tag fs-8">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <span class="section-subtitle">Verified Credentials</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Cert 1 -->
+                    <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="100">
+                        <div class="cert-card glass-card p-4 d-flex align-items-center gap-3">
+                            <div class="cert-icon-wrapper icon-oracle">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                                <h3 class="h6 text-white mb-1">Oracle OCI Generative AI Professional</h3>
+                                <span class="badge bg-oracle text-dark">Oracle Cloud Infrastructure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="200">
+                        <div class="cert-card glass-card p-4 d-flex align-items-center gap-3">
+                            <div class="cert-icon-wrapper icon-oracle">
+                                <i class="fa-solid fa-cloud-sun"></i>
+                            </div>
+                            <div>
+                                <h3 class="h6 text-white mb-1">Oracle OCI AI Foundations Associate</h3>
+                                <span class="badge bg-oracle text-dark">Oracle Certified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="300">
+                        <div class="cert-card glass-card p-4 d-flex align-items-center gap-3">
+                            <div class="cert-icon-wrapper icon-servicenow">
+                                <i class="fa-solid fa-plug"></i>
+                            </div>
+                            <div>
+                                <h3 class="h6 text-white mb-1">ServiceNow Integration Hub</h3>
+                                <span class="badge bg-servicenow text-dark">ServiceNow Certified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="400">
+                        <div class="cert-card glass-card p-4 d-flex align-items-center gap-3">
+                            <div class="cert-icon-wrapper icon-servicenow">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </div>
+                            <div>
+                                <h3 class="h6 text-white mb-1">ServiceNow Flow Designer</h3>
+                                <span class="badge bg-servicenow text-dark">Workflow Automation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 5 -->
+                    <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="500">
+                        <div class="cert-card glass-card p-4 d-flex align-items-center gap-3">
+                            <div class="cert-icon-wrapper icon-servicenow">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <div>
+                                <h3 class="h6 text-white mb-1">Welcome to ServiceNow</h3>
+                                <span class="badge bg-servicenow text-dark">ServiceNow Platform</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section-padding bg-glass-section">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <span class="section-subtitle">Academic Background</span>
+                    <h2 class="section-title">Education</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8" data-aos="zoom-in">
+                        <div class="glass-card p-4 p-md-5 text-center position-relative overflow-hidden">
+                            <div class="edu-icon-bg">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="h4 text-white mb-2">Bachelor of Technology (B.Tech)</h3>
+                            <h4 class="h6 gradient-text mb-3">Civil Engineering</h4>
+                            <p class="text-light-gray fs-6 mb-2">
+                                <i class="fa-solid fa-university text-primary-color me-2"></i><strong>JNTU
+                                    Anantapur</strong> (Jawaharlal Nehru Technological University)
+                            </p>
+                            <p class="text-muted fs-7 mb-0">
+                                Strong analytical foundation, engineering problem-solving methodologies, and
+                                quantitative computation skills applied to full-stack software development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <div class="glass-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h3 class="h4 text-white mb-4">Let's Discuss Your Next Enterprise Project</h3>
+                                <p class="text-light-gray mb-4">
+                                    Whether you need a Senior Full-Stack Java Developer, cloud migration expertise, or
+                                    automated ServiceNow workflows, feel free to connect!
+                                </p>
+
+                                <div class="contact-info-list d-flex flex-column gap-3 mb-4">
+                                    <div class="contact-item d-flex align-items-center gap-3">
+                                        <div class="contact-icon">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <span class="text-muted fs-8 d-block">Email</span>
+                                            <a href="mailto:vivek.fullstack.dev@gmail.com"
+                                                class="text-white fw-semibold">vivek.fullstack.dev@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item d-flex align-items-center gap-3">
+                                        <div class="contact-icon">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div>
+                                            <span class="text-muted fs-8 d-block">Phone / WhatsApp</span>
+                                            <span class="text-white fw-semibold">+91 (Contact on Request)</span>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item d-flex align-items-center gap-3">
+                                        <div class="contact-icon">
+                                            <i class="fa-brands fa-github"></i>
+                                        </div>
+                                        <div>
+                                            <span class="text-muted fs-8 d-block">GitHub</span>
+                                            <a href="https://github.com" target="_blank" rel="noopener"
+                                                class="text-white fw-semibold">github.com/svivek-dev</a>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item d-flex align-items-center gap-3">
+                                        <div class="contact-icon">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </div>
+                                        <div>
+                                            <span class="text-muted fs-8 d-block">Location</span>
+                                            <span class="text-white fw-semibold">India</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="social-links-row d-flex gap-3">
+                                <a href="https://github.com" target="_blank" rel="noopener" class="social-btn"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="mailto:vivek.fullstack.dev@gmail.com" class="social-btn"><i
+                                        class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="glass-card p-4 p-md-5">
+                            <h3 class="h4 text-white mb-4">Send a Message</h3>
+                            <form id="contact-form" class="needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="form-name" class="form-label text-muted fs-7">Your Name</label>
+                                            <input type="text" class="form-control glass-input" id="form-name"
+                                                placeholder="John Doe" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="form-email" class="form-label text-muted fs-7">Your
+                                                Email</label>
+                                            <input type="email" class="form-control glass-input" id="form-email"
+                                                placeholder="john@example.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group mb-3">
+                                            <label for="form-subject" class="form-label text-muted fs-7">Subject</label>
+                                            <input type="text" class="form-control glass-input" id="form-subject"
+                                                placeholder="Project Opportunity / Collaboration" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group mb-3">
+                                            <label for="form-message" class="form-label text-muted fs-7">Message</label>
+                                            <textarea class="form-control glass-input" id="form-message" rows="5"
+                                                placeholder="Hi Vivek, I would like to discuss..." required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary-gradient w-100 py-3">
+                                            <i class="fa-solid fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="form-status" class="mt-3 text-center d-none"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container text-center">
+            <p class="mb-1 text-light-gray fs-7">
+                Designed &amp; Developed by <span class="gradient-text fw-bold">S. Vivek</span>
+            </p>
+            <p class="text-muted fs-8 mb-0">
+                &copy; 2026 S. Vivek. All rights reserved. Full-Stack Java &amp; Cloud Specialist.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
