@@ -12,6 +12,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
+       1.5 DARK MODE TOGGLE
+       ========================================================================== */
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  if (darkModeToggle) {
+    // Load saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.classList.toggle('dark-theme', savedTheme === 'dark');
+    updateDarkModeIcon();
+
+    // Toggle dark mode
+    darkModeToggle.addEventListener('click', () => {
+      const isDarkMode = document.body.classList.toggle('dark-theme');
+      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+      updateDarkModeIcon();
+    });
+
+    function updateDarkModeIcon() {
+      const isDarkMode = document.body.classList.contains('dark-theme');
+      darkModeToggle.innerHTML = isDarkMode
+        ? '<i class="fa-solid fa-sun"></i>'
+        : '<i class="fa-solid fa-moon"></i>';
+    }
+  }
+
+  /* ==========================================================================
        2. AMBIENT PARTICLES CANVAS BACKGROUND
        ========================================================================== */
   const canvas = document.getElementById('particles-canvas');
@@ -34,10 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
         this.speedX = (Math.random() - 0.5) * 0.8;
         this.speedY = (Math.random() - 0.5) * 0.8;
         const pastelColors = [
-          'rgba(99, 102, 241, 0.45)', // Indigo
-          'rgba(6, 182, 212, 0.45)', // Cyan
-          'rgba(34, 197, 94, 0.45)', // Emerald
-          'rgba(249, 115, 22, 0.45)', // Orange
+          'rgba(234, 88, 12, 0.45)', // Deep Orange
+          'rgba(220, 38, 38, 0.45)', // Red
+          'rgba(217, 119, 6, 0.45)', // Amber
+          'rgba(251, 191, 36, 0.45)', // Gold
         ];
         this.color =
           pastelColors[Math.floor(Math.random() * pastelColors.length)];
