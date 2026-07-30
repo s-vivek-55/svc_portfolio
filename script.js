@@ -28,39 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply saved theme and mode
   applyTheme(savedTheme, savedMode === 'dark');
 
-  // Theme selection - direct click handler with testing
-  document.addEventListener(
-    'click',
-    function (e) {
-      const themeOption = e.target.closest('.theme-option[data-theme]');
-      if (themeOption) {
-        // Stop propagation to prevent Bootstrap dropdown from handling this
-        e.stopImmediatePropagation();
-
-        const selectedTheme = themeOption.getAttribute('data-theme');
-        const isDark = document.body.classList.contains('dark-theme');
-
-        // Update localStorage and apply theme
-        localStorage.setItem('colorTheme', selectedTheme);
-        applyTheme(selectedTheme, isDark);
-        updateThemeLabel(selectedTheme);
-
-        // Close the dropdown
-        const dropdownBtn = document.getElementById('theme-toggle');
-        if (dropdownBtn) {
-          // Programmatically hide the dropdown
-          dropdownBtn.setAttribute('aria-expanded', 'false');
-          const dropdownMenu = dropdownBtn.nextElementSibling;
-          if (dropdownMenu) {
-            dropdownMenu.classList.remove('show');
-          }
-        }
-
-        return false;
-      }
-    },
-    false,
-  );
+  // Theme selection - direct listeners on each option
+  themeOptions.forEach(function (option) {
+    option.addEventListener('click', function (e) {
+      e.preventDefault();
+      const selectedTheme = this.getAttribute('data-theme');
+      const isDark = document.body.classList.contains('dark-theme');
+      localStorage.setItem('colorTheme', selectedTheme);
+      applyTheme(selectedTheme, isDark);
+      updateThemeLabel(selectedTheme);
+    });
+  });
 
   // Dark/Light mode toggle
   if (toggleModeBtn) {
@@ -149,10 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
        2. AMBIENT PARTICLES CANVAS BACKGROUND
        ========================================================================== */
+  let particles = [];
   const canvas = document.getElementById('particles-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
-    let particles = [];
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
