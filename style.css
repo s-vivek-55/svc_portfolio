@@ -933,8 +933,10 @@ body.dark-theme.blue-theme .typewriter {
 /* ==========================================================================
    TECHNICAL SKILLS
    ========================================================================== */
-#skills .row > [class*="col-"] {
-    display: flex;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
 }
 
 .skill-card {
@@ -942,11 +944,14 @@ body.dark-theme.blue-theme .typewriter {
     overflow: hidden;
     background: #FFFFFF;
     border: 1px solid #E2E8F0;
-    height: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    padding: 1rem;
 }
 
 .skill-icon {

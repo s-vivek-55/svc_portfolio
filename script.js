@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeLabel = document.querySelector('.theme-label');
   const themeToggle = document.getElementById('theme-toggle');
 
+  // Declare particles array here so updateParticleColors() can access it
+  // before the canvas block initialises it (avoids temporal dead zone)
+  let particles = [];
+
   // Load saved preferences
   const savedTheme = localStorage.getItem('colorTheme') || 'orange';
   const savedMode = localStorage.getItem('themeMode') || 'light';
@@ -127,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
        2. AMBIENT PARTICLES CANVAS BACKGROUND
        ========================================================================== */
-  let particles = [];
   const canvas = document.getElementById('particles-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
