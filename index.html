@@ -64,10 +64,27 @@
                         <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
                         <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
                         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                        <li class="nav-item ms-lg-3">
-                            <button id="dark-mode-toggle" class="btn btn-nav-cta" title="Toggle Dark Mode">
-                                <i class="fa-solid fa-moon"></i>
+                        <li class="nav-item ms-lg-3 dropdown">
+                            <button id="theme-toggle" class="btn btn-nav-cta dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Change Theme">
+                                <i class="fa-solid fa-palette"></i>
+                                <span class="theme-label">Orange</span>
                             </button>
+                            <ul class="dropdown-menu dropdown-menu-end theme-dropdown">
+                                <li><a class="dropdown-item theme-option" data-theme="orange" href="#">
+                                    <i class="fa-solid fa-circle" style="color: #EA580C;"></i> Orange Theme
+                                </a></li>
+                                <li><a class="dropdown-item theme-option" data-theme="green" href="#">
+                                    <i class="fa-solid fa-circle" style="color: #10B981;"></i> Green Theme
+                                </a></li>
+                                <li><a class="dropdown-item theme-option" data-theme="blue" href="#">
+                                    <i class="fa-solid fa-circle" style="color: #3B82F6;"></i> Blue Theme
+                                </a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item theme-option" id="toggle-mode" href="#">
+                                    <i class="fa-solid fa-moon" id="mode-icon"></i> <span id="mode-text">Dark Mode</span>
+                                </a></li>
+                            </ul>
+                        </li>
                         </li>
                         <li class="nav-item ms-2">
                             <a href="#contact" class="btn btn-nav-cta">Let's Talk</a>

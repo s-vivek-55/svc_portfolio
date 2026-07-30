@@ -12,30 +12,140 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-       1.5 DARK MODE TOGGLE
+       1.5 THEME SWITCHER
        ========================================================================== */
-  const darkModeToggle = document.getElementById('dark-mode-toggle');
-  if (darkModeToggle) {
-    // Load saved theme preference
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.body.classList.toggle('dark-theme', savedTheme === 'dark');
-    updateDarkModeIcon();
+  const themeOptions = document.querySelectorAll('.theme-option[data-theme]');
+  const toggleModeBtn = document.getElementById('toggle-mode');
+  const modeIcon = document.getElementById('mode-icon');
+  const modeText = document.getElementById('mode-text');
+  const themeLabel = document.querySelector('.theme-label');
+  const themeToggle = document.getElementById('theme-toggle');
 
-    // Toggle dark mode
-    darkModeToggle.addEventListener('click', () => {
+  // Load saved preferences
+  const savedTheme = localStorage.getItem('colorTheme') || 'orange';
+  const savedMode = localStorage.getItem('themeMode') || 'light';
+
+  // Apply saved theme and mode
+  applyTheme(savedTheme, savedMode === 'dark');
+
+  // Theme selection - direct click handler with testing
+  document.addEventListener(
+    'click',
+    function (e) {
+      const themeOption = e.target.closest('.theme-option[data-theme]');
+      if (themeOption) {
+        // Stop propagation to prevent Bootstrap dropdown from handling this
+        e.stopImmediatePropagation();
+
+        const selectedTheme = themeOption.getAttribute('data-theme');
+        const isDark = document.body.classList.contains('dark-theme');
+
+        // Update localStorage and apply theme
+        localStorage.setItem('colorTheme', selectedTheme);
+        applyTheme(selectedTheme, isDark);
+        updateThemeLabel(selectedTheme);
+
+        // Close the dropdown
+        const dropdownBtn = document.getElementById('theme-toggle');
+        if (dropdownBtn) {
+          // Programmatically hide the dropdown
+          dropdownBtn.setAttribute('aria-expanded', 'false');
+          const dropdownMenu = dropdownBtn.nextElementSibling;
+          if (dropdownMenu) {
+            dropdownMenu.classList.remove('show');
+          }
+        }
+
+        return false;
+      }
+    },
+    false,
+  );
+
+  // Dark/Light mode toggle
+  if (toggleModeBtn) {
+    toggleModeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       const isDarkMode = document.body.classList.toggle('dark-theme');
-      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-      updateDarkModeIcon();
+      localStorage.setItem('themeMode', isDarkMode ? 'dark' : 'light');
+      updateModeIcon();
     });
+  }
 
-    function updateDarkModeIcon() {
-      const isDarkMode = document.body.classList.contains('dark-theme');
-      darkModeToggle.innerHTML = isDarkMode
-        ? '<i class="fa-solid fa-sun"></i>'
-        : '<i class="fa-solid fa-moon"></i>';
+  function applyTheme(theme, isDark) {
+    // Remove all theme classes
+    document.body.classList.remove('orange-theme', 'green-theme', 'blue-theme');
+
+    // Add selected theme class (except orange which is default)
+    if (theme !== 'orange') {
+      document.body.classList.add(theme + '-theme');
+    }
+
+    // Apply dark mode if needed
+    document.body.classList.toggle('dark-theme', isDark);
+    updateModeIcon();
+
+    // Update particle colors based on theme
+    updateParticleColors(theme);
+  }
+
+  function updateThemeLabel(theme) {
+    const labels = {
+      orange: 'Orange',
+      green: 'Green',
+      blue: 'Blue',
+    };
+    if (themeLabel) {
+      themeLabel.textContent = labels[theme] || 'Orange';
     }
   }
 
+  function updateModeIcon() {
+    const isDarkMode = document.body.classList.contains('dark-theme');
+    if (modeIcon) {
+      modeIcon.className = isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    }
+    if (modeText) {
+      modeText.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+    }
+  }
+
+  // Initialize labels
+  updateThemeLabel(savedTheme);
+  updateModeIcon();
+
+  // Function to get particle colors based on theme
+  function getParticleColors(theme) {
+    const colorPalettes = {
+      orange: [
+        'rgba(234, 88, 12, 0.45)', // Deep Orange
+        'rgba(220, 38, 38, 0.45)', // Red
+        'rgba(217, 119, 6, 0.45)', // Amber
+        'rgba(251, 191, 36, 0.45)', // Gold
+      ],
+      green: [
+        'rgba(16, 185, 129, 0.45)', // Emerald
+        'rgba(5, 150, 105, 0.45)', // Medium Green
+        'rgba(4, 120, 87, 0.45)', // Dark Green
+        'rgba(52, 211, 153, 0.45)', // Light Green
+      ],
+      blue: [
+        'rgba(59, 130, 246, 0.45)', // Bright Blue
+        'rgba(37, 99, 235, 0.45)', // Medium Blue
+        'rgba(29, 78, 216, 0.45)', // Dark Blue
+        'rgba(96, 165, 250, 0.45)', // Sky Blue
+      ],
+    };
+    return colorPalettes[theme] || colorPalettes['orange'];
+  }
+
+  // Function to update particle colors
+  function updateParticleColors(theme) {
+    const newColors = getParticleColors(theme);
+    particles.forEach((particle) => {
+      particle.color = newColors[Math.floor(Math.random() * newColors.length)];
+    });
+  }
   /* ==========================================================================
        2. AMBIENT PARTICLES CANVAS BACKGROUND
        ========================================================================== */
@@ -52,13 +162,14 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', resizeCanvas);
 
     class Particle {
-      constructor() {
+      constructor(colors = null) {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.size = Math.random() * 2 + 1;
         this.speedX = (Math.random() - 0.5) * 0.8;
         this.speedY = (Math.random() - 0.5) * 0.8;
-        const pastelColors = [
+        // Use provided colors or default to orange theme
+        const pastelColors = colors || [
           'rgba(234, 88, 12, 0.45)', // Deep Orange
           'rgba(220, 38, 38, 0.45)', // Red
           'rgba(217, 119, 6, 0.45)', // Amber
@@ -87,8 +198,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function initParticles() {
       particles = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 18000);
+      const currentTheme = localStorage.getItem('colorTheme') || 'orange';
+      const colors = getParticleColors(currentTheme);
       for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
+        particles.push(new Particle(colors));
       }
     }
     initParticles();
